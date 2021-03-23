@@ -25,7 +25,8 @@ const P5Sketch = () => {
       let canvasDiv = document.querySelector("#canvas-limit");
       let width = canvasDiv.offsetWidth;
       let height = canvasDiv.offsetHeight;
-      p5.createCanvas(width, height);
+      let gameCanvas = p5.createCanvas(width, height);
+      gameCanvas.parent(canvasDiv);
       p5.frameRate(30);
       p5.textSize(32);
       birdCollision = p5.loadSound(soundBird);
